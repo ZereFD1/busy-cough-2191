@@ -1,0 +1,88 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.Navbar {
+  width: 100%;
+  /* position: fixed; */
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(247, 248, 247);
+  z-index: 1000;
+}
+.Navbar::before{
+    position: absolute;
+    height: 100px;
+}
+
+
+.logo img {
+  width: 80px;
+  border-radius: 50px;
+  margin-left: 10rem;
+}
+.Nav {
+  width: 100%;
+  padding-top: 10px;
+}
+.Nav ul {
+  display: flex;
+}
+.Nav ul li {
+  list-style: none;
+}
+.Nav ul li a {
+  width: 80%;
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.Nav ul li input {
+  border-radius: 5px;
+  margin-top: -11px;
+  padding: 15px 10px 15px;
+  border: none;
+  background-color: rgb(239, 234, 234);
+  width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.Nav ul li a:hover {
+  color: #ffd447;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: white;
+}
+
+
+.nav2 h3{
+    height: 50px;
+    position: fixed;
+    top:100px;
+    width: 100%;
+    background-color: rgb(255, 183, 0);
+    text-align: center;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Slide{
+    margin: 80px auto;
+    display: block;
+    width: 90%;
+
+}
+
+.btn{
+    margin-top: -7rem;
+}
