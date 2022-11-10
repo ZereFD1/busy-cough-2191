@@ -3,21 +3,26 @@
   padding: 0%;
 }
 
-.Navbar {
-  width: 100%;
-  /* position: fixed; */
-  display: flex;
+
+.navbar{
+  position: fixed;
+  background-color: rgb(255, 255, 255);
   height: 100px;
-  align-items: center;
+  width:100%;
+  display: flex;
   justify-content: center;
-  text-align: center;
-  background-color: rgb(247, 248, 247);
+  align-items: center;
+}
+.navbar::before{
+  position: fixed;
   z-index: 1000;
+  top: 0;
+  display: block;
+  content: "";
+  height: 100%;
+
 }
-.Navbar::before{
-    position: absolute;
-    height: 100px;
-}
+
 
 
 .logo img {
@@ -25,17 +30,17 @@
   border-radius: 50px;
   margin-left: 10rem;
 }
-.Nav {
+.nav {
   width: 100%;
   padding-top: 10px;
 }
-.Nav ul {
+.nav ul {
   display: flex;
 }
-.Nav ul li {
+.nav ul li {
   list-style: none;
 }
-.Nav ul li a {
+.nav ul li a {
   width: 80%;
   color: black;
   padding: 16px 16px;
@@ -43,8 +48,12 @@
   font-size: 1rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+.nav ul li a span{
+  color: rgb(255, 166, 0);
+  background-color: #fff;
+}
 
-.Nav ul li input {
+.nav ul li input {
   border-radius: 5px;
   margin-top: -11px;
   padding: 15px 10px 15px;
@@ -55,34 +64,85 @@
   margin-right: 20px;
 }
 
-.Nav ul li a:hover {
+.nav ul li a:hover {
   color: #ffd447;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: white;
 }
 
-
-.nav2 h3{
-    height: 50px;
-    position: fixed;
-    top:100px;
-    width: 100%;
-    background-color: rgb(255, 183, 0);
-    text-align: center;
-    align-items: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.nav2{
+  color: white;
+  text-align: center;
+ padding-top: 110px;
+  background-color: rgb(255, 171, 25);
+  height: 40px;
 }
+
 
 .Slide{
-    margin: 80px auto;
-    display: block;
-    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    
 
 }
 
-.btn{
-    margin-top: -7rem;
+.Slide img{
+  width: 100%;
+
 }
+
+.button{
+
+    font-size: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+
+}
+
+.mid{
+
+  height: 100%;
+  width: 80%;
+  display: block;
+  margin: 50px auto;
+
+}
+
+.mid img{
+
+  margin: 50px auto;
+
+}
+
+hr{
+  background-color: rgba(175, 175, 175, 0.863);
+}
+
+#lip_image{
+
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+
+}
+
+#lip_image>div{
+  width: 15%;
+}
+
+
+#lip_image img{
+
+  width: 100%;
+
+}
+
+#lip_image>div:hover{
+  width: 17%;
+}
+
