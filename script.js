@@ -34,3 +34,4 @@
     else i = 0;
   }
   setInterval(slide, 2500);
+

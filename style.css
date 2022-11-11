@@ -1,3 +1,4 @@
+
 * {
   margin: 0%;
   padding: 0%;
@@ -120,12 +121,18 @@
 
 hr{
   background-color: rgba(175, 175, 175, 0.863);
+  margin: 50px;
+}
+
+#LipStick{
+  margin: 50px auto 50px auto;
+  width: 80%;
 }
 
 #lip_image{
 
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: auto;
   justify-content: space-between;
 
@@ -143,6 +150,150 @@ hr{
 }
 
 #lip_image>div:hover{
-  width: 17%;
+  width: 20%;
 }
+
+#Category{
+  margin: 50px auto;
+  width: 80%;
+}
+
+h1{
+  margin-bottom: 50px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
+
+/*!Mid Section*/
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.container>div{
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+
+}
+
+.container>div:hover{
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  zoom: 1;
+
+}
+
+.container>div img{
+
+ width: 100%;
+
+  }
+
+  .container>div button{
+
+    margin: 8px;
+    padding: 5px;
+    background-color:rgba(127, 255, 212, 0.468);
+    border-radius: 6px;
+    color: black;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+
+  }
+/*!Mid Section End */
+
+#mid_banner{
+
+  width: 80%;
+  margin: auto;
+
+}
+
+#m_banner{
+
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#m_banner>div{
+
+  width: 30%;
+  cursor: pointer;
+
+}
+
+#m_banner img{
+
+  width: 100%;
+
+}
+
+#Contact{
+
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: flex-end;
+  margin: auto;
+
+}
+
+#Contact>div>div{
+
+  margin: 20px;
+
+}
+
+#Contact h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Contact-1 input{
+  padding-left: 20px;
+  width: 350px;
+  height: 55px;
+  border: none;
+  background-color: rgb(239, 234, 234);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 18px;
+}
+
+
+.Contact-1 button{
+
+  margin: 10px;
+  padding: 17px 40px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+
+}
+
+.Contact-2 button{
+
+  margin: 20px;
+  padding: 5px 15px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
 
