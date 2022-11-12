@@ -7,7 +7,7 @@
     <link rel="browser icon" href="image/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b06a377e67.js" crossorigin="anonymous"> </script>
-    <title>LipSticks</title>
+    <title>Cart</title>
 </head>
 <body>
     <!-- NavBar Start-->
@@ -46,71 +46,50 @@
         <!-- <h3>Lakme - Min 30% off > </h3> -->
     </div>
       <!-- NavBar End-->
-
-    <div class="container">
-
-</div>
+    <div class="container"></div>
 </body>
 </html>
 <script>
 
-//   ! Mid Section Js 
-let url ="https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=Vegan&product_type=lipstick"
-let bag=[];
-let cartItems=JSON.parse(localStorage.getItem("cartProducts"))||[];
-let bestseller=[];
+    let cartItems = JSON.parse(localStorage.getItem("cartProducts"));
+    console.log(cartItems);
+    displaydata(cartItems);
 
-fetch(url)
-.then((resolve)=> resolve.json())
-.then((data)=>{
-   bag=data;
-   displaydata(data);
-})
+function displaydata(cartItems){
 
-function displaydata(data){
+document.querySelector(".container").innerHTML="";
 
-   document.querySelector(".container").innerHTML="";
+cartItems.forEach(element => {
 
-   data.forEach(element => {
+    let div=document.createElement("div");
 
-       let div=document.createElement("div");
-       div.addEventListener("click",function(){
-
-        bestseller.push(element);
-        localStorage.setItem("Product_Detail",JSON.stringify(bestseller));
-        console.log(element)
-
-       })
-
-       let img=document.createElement("img");
-       img.setAttribute("src",element.image_link);
+    let img=document.createElement("img");
+    img.setAttribute("src",element.image_link);
 
 
-       let title=document.createElement("h2");
-       title.innerText=element.name;
-       
-       let price_tag=document.createElement("h2");
-       price_tag.innerText=element.price_sign;
+    let title=document.createElement("h2");
+    title.innerText=element.name;
+    
+    let price_tag=document.createElement("h2");
+    price_tag.innerText=element.price_sign;
 
-       let price=document.createElement("h2");
-       price.innerText=element.price;
+    let price=document.createElement("h2");
+    price.innerText=element.price;
 
-       let button=document.createElement("button");
-       button.innerText="Add to Cart"
-       button.addEventListener("click",function(){
-        cartItems.push(element);
-        localStorage.setItem("cartProducts",JSON.stringify(cartItems))
-        alert("added to Cart");
+    // let button=document.createElement("button");
+    // button.innerText="Add to Cart"
+    // button.addEventListener("click",function(){
+    //  cartItems.push(element);
+    //  localStorage.setItem("cartProducts",JSON.stringify(cartItems))
 
-       })
+    // })
 
 
-       div.append(img,title,price_tag,price,button);
+    div.append(img,title,price_tag,price);
 
-       document.querySelector(".container").append(div);
-       
-   });
+    document.querySelector(".container").append(div);
+    
+});
 }
-// ! Mid section js Ends
 
 </script>

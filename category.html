@@ -7,14 +7,11 @@
     <link rel="browser icon" href="image/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b06a377e67.js" crossorigin="anonymous"> </script>
-    <title>Document</title>
-
-
+    <title>Category</title>
 </head>
 <body>
-    
-     <!-- <-- NavBar Start-->
-     <div class="navbar">
+    <!-- NavBar Start-->
+    <div class="navbar">
         <div class="logo">
           <a href="/index.html"><img src="image/FunWithFashion (1).png" alt="" /></a>
         </div>
@@ -37,7 +34,7 @@
               <a href="#"><i class="fa-regular fa-heart"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+              <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
             </li>
             <li>
               <a href="#"><i class="fa-regular fa-user"></i></a>
@@ -45,12 +42,12 @@
           </ul>
         </div>
       </div>
-  
-      <!-- <*!-- NavBar End --> -->
+      <div class="nav2">
+        <!-- <h3>Lakme - Min 30% off > </h3> -->
+    </div>
+      <!-- NavBar End--> 
 
-    <div class="container">+
-
-</div>
+    <div class="container"></div>
 </body>
 </html>
 <script>
@@ -58,6 +55,7 @@
 //   ! Mid Section Js 
 let url ="https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=Vegan&product_type=nail_polish"
 let bag=[];
+let cartItems=JSON.parse(localStorage.getItem("cartProducts"))||[];
 
 fetch(url)
 .then((resolve)=> resolve.json())
@@ -89,6 +87,13 @@ function displaydata(data){
 
        let button=document.createElement("button");
        button.innerText="Add to Cart"
+       
+       button.addEventListener("click",function(){
+        cartItems.push(element);
+        localStorage.setItem("cartProducts",JSON.stringify(cartItems))
+        alert("added to Cart");
+
+       })
 
 
        div.append(img,title,price_tag,price,button);

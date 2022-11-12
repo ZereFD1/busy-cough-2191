@@ -7,14 +7,11 @@
     <link rel="browser icon" href="image/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b06a377e67.js" crossorigin="anonymous"> </script>
-    <title>Document</title>
-
-
+    <title>BestSellor</title>
 </head>
 <body>
-    
-     <!-- <-- NavBar Start-->
-     <div class="navbar">
+    <!-- NavBar Start-->
+    <div class="navbar">
         <div class="logo">
           <a href="/index.html"><img src="image/FunWithFashion (1).png" alt="" /></a>
         </div>
@@ -37,7 +34,7 @@
               <a href="#"><i class="fa-regular fa-heart"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+              <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
             </li>
             <li>
               <a href="#"><i class="fa-regular fa-user"></i></a>
@@ -45,12 +42,12 @@
           </ul>
         </div>
       </div>
-  
-      <!-- <*!-- NavBar End --> -->
+      <div class="nav2">
+        <!-- <h3>Lakme - Min 30% off > </h3> -->
+    </div>
+      <!-- NavBar End-->
 
-    <div class="container">+
-
-</div>
+    <a href="Product_Detail.html"><div class="container"></div></a> 
 </body>
 </html>
 <script>
@@ -58,6 +55,7 @@
 //   ! Mid Section Js 
 let url ="https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=Natural&product_type=mascara"
 let bag=[];
+let bestseller=[];
 
 fetch(url)
 .then((resolve)=> resolve.json())
@@ -73,6 +71,13 @@ function displaydata(data){
    data.forEach(element => {
 
        let div=document.createElement("div");
+       div.addEventListener("click",function(){
+
+        bestseller.push(element);
+        localStorage.setItem("Product_Detail",JSON.stringify(bestseller));
+        console.log(element)
+
+       })
 
        let img=document.createElement("img");
        img.setAttribute("src",element.image_link);
