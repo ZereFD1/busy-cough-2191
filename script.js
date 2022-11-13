@@ -2,6 +2,7 @@
     //* Highlights
     //? Queries
     // Todo Email
+    //! Alert
    
    let previous = document.getElementById('previous');
     let next = document.getElementById('next');
@@ -35,3 +36,25 @@
   }
   setInterval(slide, 2500);
 
+
+let y= document.getElementById("login")
+y.style.display="none"
+
+function loginPage(){
+    if(y.style.display=="none"){
+        y.style.display="flex"
+    }
+    else{
+        y.style.display="none"
+    }
+}
+
+
+document.getElementById("btn1").addEventListener("click",conti);
+
+function conti(){
+confirm("do you want to login")
+
+
+
+}
